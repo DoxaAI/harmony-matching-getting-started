@@ -32,10 +32,18 @@ class Evaluator(BaseEvaluator):
 
         model = SentenceTransformer(str(directory / "model"))
 
-        embeddings_1 = model.encode(df["sentence_1"], normalize_embeddings=True)
-        embeddings_2 = model.encode(df["sentence_2"], normalize_embeddings=True)
+        sentences = list(set(df["sentence_1"]) | set(df["sentence_2"]))
+        embeddings = {
+            sentence: embedding
+            for sentence, embedding in zip(
+                sentences, model.encode(sentences, batch_size=16)
+            )
+        }
 
-        df["prediction"] = model.similarity_pairwise(embeddings_1, embeddings_2)
+        df["prediction"] = model.similarity_pairwise(
+            df["sentence_1"].map(embeddings),
+            df["sentence_2"].map(embeddings),
+        )
         df["prediction"] = (100 * df["prediction"]).apply(int).clip(0, 100)
 
         for _, row in df.iterrows():
