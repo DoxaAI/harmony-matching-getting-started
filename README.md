@@ -1,10 +1,12 @@
 # **Harmony**: Matching Algorithm Improvement Challenge
 
-<center>
-    ![Harmony logo](https://harmonydata.ac.uk/images/logo.svg)
+<p align="center">
+<img src="https://harmonydata.ac.uk/images/logo.svg" alt="Harmony logo" />
+</p>
+<p align="center">
+<a href="https://doxaai.com/competition/harmony-matching">Competition</a> | <a href="https://discord.com/invite/harmonydata">Discord</a> | <a href="https://twitter.com/harmony_data">Twitter</a> | <a href="https://www.linkedin.com/company/harmonydata/">LinkedIn</a> | <a href="https://harmonydata.ac.uk/">Website</a>
+</p>
 
-    [Competition](https://doxaai.com/competition/harmony-matching) | [Discord](https://discord.com/invite/harmonydata) | [Twitter](https://twitter.com/harmony_data) | [LinkedIn](https://www.linkedin.com/company/harmonydata/) | [Website](https://harmonydata.ac.uk/)
-
-</center>
+To get started, take a look at the `getting-started.ipynb` Jupyter notebook.
 
 **Check out the [competition page](https://doxaai.com/competition/harmony-matching) for more information on this challenge.**
